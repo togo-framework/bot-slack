@@ -1,0 +1,19 @@
+name: bot-slack
+module: github.com/togo-framework/bot-slack
+description: Slack driver for the togo bot subsystem (Socket Mode via slack-go).
+version: 0.1.0
+category: bot
+kind: driver
+base: togo-framework/bot
+import: github.com/togo-framework/bot-slack
+env:
+  - name: BOT_DRIVER
+    description: Set to "slack" to activate this driver.
+    required: true
+  - name: SLACK_APP_TOKEN
+    description: App-level token (xapp-…) with connections:write for Socket Mode.
+    required: true
+  - name: SLACK_BOT_TOKEN
+    description: Bot token (xoxb-…) with chat:write and message history scopes.
+    required: true
+claude: .claude
